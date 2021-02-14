@@ -1,7 +1,5 @@
 
-/*
-    Should have named this MatrixUtil...wtvr
- */
+
 
 public class MatrixUtil {
 
@@ -24,6 +22,7 @@ public class MatrixUtil {
         }
     }
 
+    //Makes an empty matrix with the same dimensions as the input
     public static int[][] makeDummyMatrix(int[][] mat){
         int len = mat.length;
         int[][] output = new int[len][];

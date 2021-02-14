@@ -284,11 +284,19 @@ public class Chapter1 {
     }
 
     //String Rotation
-
+//    public boolean stringRotation(String str1, String str2){
+//
+//    }
+//
 
     //code driver
     public static void main(String[] args) {
         Chapter1 ch = new Chapter1();
+        String a = "abcdef";
+        String b = "cde";
+        String c = "xxx";
+        String d = "a";
+        System.out.println(StringUtil.isSubString(a,d));
 
     }
 

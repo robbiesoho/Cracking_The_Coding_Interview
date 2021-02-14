@@ -137,7 +137,7 @@ public class Chapter1Test {
     }
 
     @Test
-    void zeroMatrix(){
+    void zeroMatrixTest(){
         int[][] matrix1 = {
                 {0,2,3},
                 {4,5,6},
@@ -149,8 +149,6 @@ public class Chapter1Test {
                 {0,5,6},
                 {0,8,9}
         };
-
-
 
         int[][] matrix2 = {
                 {2,4},
@@ -181,6 +179,12 @@ public class Chapter1Test {
         assertTrue(MatrixUtil.matrixEquals(ch1.zeroMatrix(matrix3), ans3));
 
     }
+
+//    @Test
+//    void stringRotationTest(){
+//        assertTrue(ch1.stringRotation("watterbottle", "erbottlewat"));
+//
+//    }
 
 }
 
