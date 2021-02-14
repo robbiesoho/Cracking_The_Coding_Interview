@@ -1,9 +1,14 @@
+package com.CTCI.ch1;
+
+import com.CTCI.util.MatrixUtil;
+import com.CTCI.util.StringUtil;
+
 import java.util.*;
 
 public class Chapter1 {
 
     //String builder
-    String joinWords(String[] words) {
+    public String joinWords(String[] words) {
         StringBuilder sentence = new StringBuilder();
         for (String w : words) {
             sentence.append(w);
@@ -12,7 +17,7 @@ public class Chapter1 {
     }
 
     //Is Unique
-    boolean isUnique(String word) {
+    public boolean isUnique(String word) {
         for (int i = 0; i < word.length() / 2; i++) {
             for (int j = word.length() - 1; j >= word.length() / 2; j--) {
                 if (word.charAt(i) == (word.charAt(j))) {
@@ -26,7 +31,7 @@ public class Chapter1 {
     }
 
     //Check permutation
-    boolean checkPerm(String str1, String str2) {
+    public boolean checkPerm(String str1, String str2) {
         HashMap<Character, Integer> str1map = new HashMap<Character, Integer>();
         HashMap<Character, Integer> str2map = new HashMap<Character, Integer>();
 
@@ -59,7 +64,7 @@ public class Chapter1 {
     }
 
     //URLify
-    char[] urlify(String str) {
+    public char[] urlify(String str) {
 
         int[] indexOfSpaces = new int[str.length()];
         int lengthOfOutput = str.length();
@@ -92,7 +97,7 @@ public class Chapter1 {
     }
 
     //Palindrome Permutation
-    boolean palPer(String str) {
+    public boolean palPer(String str) {
         int len = str.length();
         char[] charArr = new char[len];
         for (int i = 0; i < len; i++) {
@@ -224,7 +229,7 @@ public class Chapter1 {
     //Rotate Matrix
     // I'm going counter clockwise
     // n x n matrix
-    int[][] rotateMatrix(int[][] mat) {
+    public int[][] rotateMatrix(int[][] mat) {
 
         int n = mat[0].length;
         int[][] output = new int[n][n];
@@ -283,20 +288,23 @@ public class Chapter1 {
 
     }
 
-    //String Rotation
-//    public boolean stringRotation(String str1, String str2){
-//
-//    }
-//
+//    String Rotation
+//    stringMinusSub uses StringUtil.isSubString method
+    public boolean stringRotation(String str1, String str2){
+        String bigSub = StringUtil.getBiggestSubString(str1,str2);
+        String dummy1 = StringUtil.stringMinusSub(str1,bigSub);
+        String dummy2 = StringUtil.stringMinusSub(str2,bigSub);
+
+        boolean output = dummy1.equals(dummy2) ? true : false;
+
+        return output;
+
+    }
+
 
     //code driver
     public static void main(String[] args) {
         Chapter1 ch = new Chapter1();
-        String a = "abcdef";
-        String b = "cde";
-        String c = "xxx";
-        String d = "a";
-        System.out.println(StringUtil.isSubString(a,d));
 
     }
 

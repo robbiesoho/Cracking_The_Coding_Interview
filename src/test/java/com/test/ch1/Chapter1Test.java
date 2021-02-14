@@ -1,3 +1,7 @@
+package com.test.ch1;
+
+import com.CTCI.ch1.Chapter1;
+import com.CTCI.util.MatrixUtil;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -180,11 +184,11 @@ public class Chapter1Test {
 
     }
 
-//    @Test
-//    void stringRotationTest(){
-//        assertTrue(ch1.stringRotation("watterbottle", "erbottlewat"));
-//
-//    }
+    @Test
+    void stringRotationTest(){
+        assertTrue(ch1.stringRotation("watterbottle", "erbottlewatt"));
+        assertFalse(ch1.stringRotation("watterbottle", "notwatterbottle"));
+    }
 
 }
 
