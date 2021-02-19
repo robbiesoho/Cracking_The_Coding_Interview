@@ -2,13 +2,13 @@ package com.CTCI.ch2;
 
 public class Node {
     public Node next = null;
-    public int data;
+    public Integer data;
 
-    public Node(int data){
+    public Node(Integer data){
         this.data = data;
     }
 
-    public void appendToTail(int d){
+    public void appendToTail(Integer d){
         Node end = new Node(d);
         Node n = this;
         while (n.next != null){

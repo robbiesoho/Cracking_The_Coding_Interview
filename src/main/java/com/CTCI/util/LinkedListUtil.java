@@ -2,9 +2,9 @@ package com.CTCI.util;
 
 import com.CTCI.ch2.Node;
 
-public class LinkedList {
+public class LinkedListUtil {
 
-    public static Node deleteNode(Node head, int d){
+    public static Node deleteNode(Node head, Integer d){
         if(head == null) return null;
         Node n = head;
 
@@ -23,7 +23,7 @@ public class LinkedList {
     }
 
 
-    public static Node arrayToLinkedList(int[] arr){
+    public static Node arrayToLinkedList(Integer[] arr){
         Node head = new Node(arr[0]);;
         Node currNode = head;
         int counter =1;
